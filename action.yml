@@ -1,0 +1,39 @@
+name: Our Agent Said What?! release gate
+description: Evaluate a deployment release gate; exits 0 pass, 1 fail, 2 inconclusive.
+inputs:
+  agent:
+    description: Agent id in the QA workspace
+    required: true
+  version:
+    description: Exact prompt version id; defaults to the deployment selection
+    required: false
+outputs:
+  exit-code:
+    description: CLI exit status (0 pass, 1 fail, 2 inconclusive or misconfigured)
+    value: ${{ steps.gate.outputs.exit-code }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - id: gate
+      shell: bash
+      env:
+        # Keep AGENT_QA_* environment names for compatibility with the action runner.
+        AGENT_QA_ACTION_PATH: ${{ github.action_path }}
+        AGENT_QA_AGENT: ${{ inputs.agent }}
+        AGENT_QA_VERSION: ${{ inputs.version }}
+      run: |
+        node --input-type=module <<'NODE'
+        import { spawnSync } from 'node:child_process'
+        import { appendFileSync } from 'node:fs'
+        import { join } from 'node:path'
+        const args = [join(process.env.AGENT_QA_ACTION_PATH, 'cli.mjs'), 'gate',
+          '--agent', process.env.AGENT_QA_AGENT]
+        if (process.env.AGENT_QA_VERSION) args.push('--version', process.env.AGENT_QA_VERSION)
+        const result = spawnSync(process.execPath, args, { stdio: 'inherit', env: process.env })
+        const code = result.status ?? 2
+        appendFileSync(process.env.GITHUB_OUTPUT, `exit-code=${code}\n`)
+        process.exit(code)
+        NODE

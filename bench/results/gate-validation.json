@@ -1,0 +1,3699 @@
+{
+  "measures": "Pure release gate and suite aggregation behavior on constructed score inputs. These are not detector or judge quality scores. v2 reduces accuracy while improving the other parameters on the same generated call ids.",
+  "source": "bench/gate-validation.ts",
+  "calls": [
+    {
+      "id": "call-0011",
+      "domain": "food-delivery",
+      "language": "Hinglish-mixed",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "मेरे order का total कितना हुआ?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "आपके order का total 500 rupees है.",
+          "startMs": 2400,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7200,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Place the order for home delivery.",
+          "startMs": 10200,
+          "endMs": 12300
+        },
+        {
+          "role": "agent",
+          "text": "आपके order का total 500 rupees है.",
+          "startMs": 12600,
+          "endMs": 14800
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15100,
+          "endMs": 17200
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17500,
+          "endMs": 20000
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20300,
+          "endMs": 22300
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22600,
+          "endMs": 24300
+        }
+      ],
+      "faults": [
+        {
+          "id": "loop-repeat",
+          "turnIndex": 5,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0007",
+      "domain": "food-delivery",
+      "language": "Hinglish-Latin",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Mere order ka total kitna hua?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Aapke order ka total 500 rupees hai.",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Place the order for home delivery.",
+          "startMs": 10300,
+          "endMs": 12400
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0009",
+      "domain": "real-estate",
+      "language": "Hinglish-mixed",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Flat देखने का charge कितना है?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "Viewing का charge 500 rupees है.",
+          "startMs": 2400,
+          "endMs": 4500
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4800,
+          "endMs": 6800
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7100,
+          "endMs": 9800
+        },
+        {
+          "role": "caller",
+          "text": "Arrange a viewing for tomorrow.",
+          "startMs": 10100,
+          "endMs": 12100
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12400,
+          "endMs": 14600
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14900,
+          "endMs": 17000
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17300,
+          "endMs": 19800
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20100,
+          "endMs": 22100
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22400,
+          "endMs": 24100
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0023",
+      "domain": "food-delivery",
+      "language": "Hinglish-mixed",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, मेरे order का total कितना हुआ?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "आपके order का total 900 rupees है.",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Place the order for home delivery.",
+          "startMs": 10300,
+          "endMs": 12400
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": [
+        {
+          "id": "wrong-fact",
+          "turnIndex": 1,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0014",
+      "domain": "bank",
+      "language": "English",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, When will my replacement card arrive?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Your replacement card will arrive on 15 November.",
+          "startMs": 2500,
+          "endMs": 4800
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 5100,
+          "endMs": 7100
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7400,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Registered address pe bhej dijiye.",
+          "startMs": 10000,
+          "endMs": 12000,
+          "endpointMs": 11000
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12300,
+          "endMs": 15000
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15300,
+          "endMs": 15600
+        }
+      ],
+      "faults": [
+        {
+          "id": "false-endpoint",
+          "turnIndex": 4,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        },
+        {
+          "id": "early-hangup",
+          "turnIndex": 6,
+          "expectedLayer": "telecom",
+          "uiLayer": "platform"
+        }
+      ],
+      "hangup": {
+        "atMs": 15600,
+        "initiatedBy": "agent"
+      }
+    },
+    {
+      "id": "call-0015",
+      "domain": "food-delivery",
+      "language": "English",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, What is the total for my order?",
+          "startMs": 0,
+          "endMs": 2300
+        },
+        {
+          "role": "agent",
+          "text": "We have lots of options. What else can I help you with?",
+          "startMs": 2600,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7300,
+          "endMs": 9600
+        },
+        {
+          "role": "caller",
+          "text": "Home delivery ke liye order kar dijiye.",
+          "startMs": 9900,
+          "endMs": 12100
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12400,
+          "endMs": 15100
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15400,
+          "endMs": 17500
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17800,
+          "endMs": 20200
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20500,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": [
+        {
+          "id": "dodged-question",
+          "turnIndex": 1,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0027",
+      "domain": "food-delivery",
+      "language": "English",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "What is the total for my order?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Your order total is 500 rupees.",
+          "startMs": 2500,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7200,
+          "endMs": 9500
+        },
+        {
+          "role": "caller",
+          "text": "Home delivery ke liye order kar dijiye.",
+          "startMs": 9800,
+          "endMs": 12000
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 20300,
+          "endMs": 23000
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 23300,
+          "endMs": 25400
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 25700,
+          "endMs": 28100
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 28400,
+          "endMs": 30300
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 30600,
+          "endMs": 32300
+        }
+      ],
+      "faults": [
+        {
+          "id": "long-gap",
+          "turnIndex": 5,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    },
+    {
+      "id": "call-0001",
+      "domain": "real-estate",
+      "language": "English",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, What is the viewing fee?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "The viewing fee is 500 rupees.",
+          "startMs": 2400,
+          "endMs": 4500
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4800,
+          "endMs": 6800
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7100,
+          "endMs": 9400
+        },
+        {
+          "role": "caller",
+          "text": "Kal ke liye viewing rakh dijiye.",
+          "startMs": 9700,
+          "endMs": 11800
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12100,
+          "endMs": 14800
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15100,
+          "endMs": 17200
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17500,
+          "endMs": 19900
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20200,
+          "endMs": 22100
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22400,
+          "endMs": 24100
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0016",
+      "domain": "telecom",
+      "language": "English",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "What does this recharge cost?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "This recharge costs 500 rupees.",
+          "startMs": 2300,
+          "endMs": 4300
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4600,
+          "endMs": 6600
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 6900,
+          "endMs": 9200
+        },
+        {
+          "role": "caller",
+          "text": "Registered number pe recharge kar dijiye.",
+          "startMs": 9500,
+          "endMs": 11600
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 19900,
+          "endMs": 22600
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 22900,
+          "endMs": 23200
+        }
+      ],
+      "faults": [
+        {
+          "id": "long-gap",
+          "turnIndex": 5,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        },
+        {
+          "id": "early-hangup",
+          "turnIndex": 6,
+          "expectedLayer": "telecom",
+          "uiLayer": "platform"
+        }
+      ],
+      "hangup": {
+        "atMs": 23200,
+        "initiatedBy": "agent"
+      }
+    },
+    {
+      "id": "call-0005",
+      "domain": "real-estate",
+      "language": "Hinglish-Latin",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Flat dekhne ka charge kitna hai?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "Viewing ka charge 500 rupees hai.",
+          "startMs": 2400,
+          "endMs": 4500
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4800,
+          "endMs": 6800
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7100,
+          "endMs": 9800
+        },
+        {
+          "role": "caller",
+          "text": "Arrange a viewing for tomorrow.",
+          "startMs": 10100,
+          "endMs": 12100
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12400,
+          "endMs": 14600
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14900,
+          "endMs": 17000
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17300,
+          "endMs": 19800
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20100,
+          "endMs": 22100
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22400,
+          "endMs": 24100
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0010",
+      "domain": "bank",
+      "language": "Hinglish-mixed",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Replacement card किस date को आएगा?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "We have lots of options. What else can I help you with?",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Send it to my registered address.",
+          "startMs": 10300,
+          "endMs": 12400,
+          "heardText": "Cancel my request, do not arrange it."
+        },
+        {
+          "role": "agent",
+          "text": "Okay, I will cancel it. Please confirm the cancellation.",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": [
+        {
+          "id": "asr-mishear",
+          "turnIndex": 4,
+          "expectedLayer": "asr",
+          "uiLayer": "platform"
+        },
+        {
+          "id": "dodged-question",
+          "turnIndex": 1,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0026",
+      "domain": "bank",
+      "language": "English",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, When will my replacement card arrive?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "We have lots of options. What else can I help you with?",
+          "startMs": 2500,
+          "endMs": 4800
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 5100,
+          "endMs": 7100
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7400,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Registered address pe bhej dijiye.",
+          "startMs": 10000,
+          "endMs": 12000,
+          "heardText": "Cancel my request, do not arrange it."
+        },
+        {
+          "role": "agent",
+          "text": "Okay, I will cancel it. Please confirm the cancellation.",
+          "startMs": 12300,
+          "endMs": 15000
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15300,
+          "endMs": 17400
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17700,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20400,
+          "endMs": 22300
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22600,
+          "endMs": 24300
+        }
+      ],
+      "faults": [
+        {
+          "id": "dodged-question",
+          "turnIndex": 1,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "asr-mishear",
+          "turnIndex": 4,
+          "expectedLayer": "asr",
+          "uiLayer": "platform"
+        }
+      ]
+    },
+    {
+      "id": "call-0006",
+      "domain": "bank",
+      "language": "Hinglish-Latin",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Replacement card kis date ko aayega?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Aapka replacement card 15 November ko aayega.",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Send it to my registered address.",
+          "startMs": 10300,
+          "endMs": 12400
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0030",
+      "domain": "bank",
+      "language": "Hinglish-Latin",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Replacement card kis date ko aayega?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Aapka replacement card 15 November ko aayega.",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Send it to my registered address.",
+          "startMs": 10300,
+          "endMs": 12400,
+          "endpointMs": 11400
+        },
+        {
+          "role": "agent",
+          "text": "Done, your request has been completed successfully.",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": [
+        {
+          "id": "unconfirmed-success",
+          "turnIndex": 5,
+          "expectedLayer": "prompt",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "false-endpoint",
+          "turnIndex": 4,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    },
+    {
+      "id": "call-0013",
+      "domain": "real-estate",
+      "language": "English",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "What is the viewing fee?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "The viewing fee is 500 rupees.",
+          "startMs": 2300,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Haan ji, main Hindi mein hi baat karunga.",
+          "startMs": 7000,
+          "endMs": 9300
+        },
+        {
+          "role": "caller",
+          "text": "Kal ke liye viewing rakh dijiye.",
+          "startMs": 9600,
+          "endMs": 11700
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12000,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15000,
+          "endMs": 17100
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17400,
+          "endMs": 19800
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20100,
+          "endMs": 22000
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22300,
+          "endMs": 24000
+        }
+      ],
+      "faults": [
+        {
+          "id": "ignored-language-switch",
+          "turnIndex": 3,
+          "expectedLayer": "prompt",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0029",
+      "domain": "real-estate",
+      "language": "Hinglish-Latin",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Flat dekhne ka charge kitna hai?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Viewing ka charge 500 rupees hai.",
+          "startMs": 2500,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 5100,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Arrange a viewing for tomorrow.",
+          "startMs": 10200,
+          "endMs": 12200
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12500,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15000,
+          "endMs": 17100
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17400,
+          "endMs": 19900
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20200,
+          "endMs": 22200
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22500,
+          "endMs": 24200
+        }
+      ],
+      "faults": [
+        {
+          "id": "talked-over-caller",
+          "turnIndex": 3,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    },
+    {
+      "id": "call-0021",
+      "domain": "real-estate",
+      "language": "Hinglish-mixed",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Flat देखने का charge कितना है?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Viewing का charge 500 rupees है.",
+          "startMs": 2500,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7200,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Arrange a viewing for tomorrow.",
+          "startMs": 10200,
+          "endMs": 12200,
+          "heardText": "Cancel my request, do not arrange it."
+        },
+        {
+          "role": "agent",
+          "text": "Okay, I will cancel it. Please confirm the cancellation.",
+          "startMs": 12500,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15000,
+          "endMs": 17100
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17400,
+          "endMs": 19900
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20200,
+          "endMs": 22200
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22500,
+          "endMs": 24200
+        }
+      ],
+      "faults": [
+        {
+          "id": "asr-mishear",
+          "turnIndex": 4,
+          "expectedLayer": "asr",
+          "uiLayer": "platform"
+        }
+      ]
+    },
+    {
+      "id": "call-0004",
+      "domain": "telecom",
+      "language": "English",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, What does this recharge cost?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "This recharge costs 500 rupees.",
+          "startMs": 2400,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7000,
+          "endMs": 9300
+        },
+        {
+          "role": "caller",
+          "text": "Registered number pe recharge kar dijiye.",
+          "startMs": 9600,
+          "endMs": 11700
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12000,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15000,
+          "endMs": 17100
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17400,
+          "endMs": 19800
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20100,
+          "endMs": 22000
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22300,
+          "endMs": 24000
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0020",
+      "domain": "telecom",
+      "language": "Hinglish-Latin",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Is recharge ka kitna lagega?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "Is recharge ke 500 rupees lagenge.",
+          "startMs": 2400,
+          "endMs": 4500
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4800,
+          "endMs": 6800
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7100,
+          "endMs": 9800
+        },
+        {
+          "role": "caller",
+          "text": "Recharge my registered number.",
+          "startMs": 10100,
+          "endMs": 12000
+        },
+        {
+          "role": "agent",
+          "text": "Is recharge ke 500 rupees lagenge.",
+          "startMs": 12300,
+          "endMs": 14500
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14800,
+          "endMs": 16900
+        },
+        {
+          "role": "agent",
+          "text": "Our policy requires a mandatory 2000 rupee approval fee before any request.",
+          "startMs": 17200,
+          "endMs": 19700
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20000,
+          "endMs": 22000
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22300,
+          "endMs": 24000
+        }
+      ],
+      "faults": [
+        {
+          "id": "hallucinated-policy",
+          "turnIndex": 7,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "loop-repeat",
+          "turnIndex": 5,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0008",
+      "domain": "telecom",
+      "language": "Hinglish-Latin",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Is recharge ka kitna lagega?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "Is recharge ke 500 rupees lagenge.",
+          "startMs": 2300,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7000,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Recharge my registered number.",
+          "startMs": 10000,
+          "endMs": 11900
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12200,
+          "endMs": 14400
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14700,
+          "endMs": 16800
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17100,
+          "endMs": 19600
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 19900,
+          "endMs": 21900
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22200,
+          "endMs": 23900
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0012",
+      "domain": "telecom",
+      "language": "Hinglish-mixed",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "इस recharge का कितना लगेगा?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "इस recharge के 900 rupees लगेंगे.",
+          "startMs": 2300,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7000,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Recharge my registered number.",
+          "startMs": 10000,
+          "endMs": 11900,
+          "endpointMs": 10900
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12200,
+          "endMs": 14400
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14700,
+          "endMs": 16800
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17100,
+          "endMs": 19600
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 19900,
+          "endMs": 21900
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22200,
+          "endMs": 23900
+        }
+      ],
+      "faults": [
+        {
+          "id": "wrong-fact",
+          "turnIndex": 1,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "false-endpoint",
+          "turnIndex": 4,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    },
+    {
+      "id": "call-0025",
+      "domain": "real-estate",
+      "language": "English",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "What is the viewing fee?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "The viewing fee is 500 rupees.",
+          "startMs": 2300,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7000,
+          "endMs": 9300
+        },
+        {
+          "role": "caller",
+          "text": "Kal ke liye viewing rakh dijiye.",
+          "startMs": 9600,
+          "endMs": 11700,
+          "endpointMs": 10700
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12000,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15000,
+          "endMs": 17100
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17400,
+          "endMs": 19800
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20100,
+          "endMs": 22000
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22300,
+          "endMs": 24000
+        }
+      ],
+      "faults": [
+        {
+          "id": "false-endpoint",
+          "turnIndex": 4,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    },
+    {
+      "id": "call-0017",
+      "domain": "real-estate",
+      "language": "Hinglish-Latin",
+      "context": "Facts: The viewing fee is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Flat dekhne ka charge kitna hai?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Viewing ka charge 500 rupees hai.",
+          "startMs": 2500,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7200,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Arrange a viewing for tomorrow.",
+          "startMs": 10200,
+          "endMs": 12200
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12500,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15000,
+          "endMs": 15300
+        }
+      ],
+      "faults": [
+        {
+          "id": "early-hangup",
+          "turnIndex": 6,
+          "expectedLayer": "telecom",
+          "uiLayer": "platform"
+        }
+      ],
+      "hangup": {
+        "atMs": 15300,
+        "initiatedBy": "agent"
+      }
+    },
+    {
+      "id": "call-0019",
+      "domain": "food-delivery",
+      "language": "Hinglish-Latin",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hello, Mere order ka total kitna hua?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Aapke order ka total 500 rupees hai.",
+          "startMs": 2500,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7300,
+          "endMs": 10000
+        },
+        {
+          "role": "caller",
+          "text": "Place the order for home delivery.",
+          "startMs": 10300,
+          "endMs": 12400
+        },
+        {
+          "role": "agent",
+          "text": "Done, your request has been completed successfully.",
+          "startMs": 12700,
+          "endMs": 14900
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15200,
+          "endMs": 17300
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17600,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20400,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": [
+        {
+          "id": "unconfirmed-success",
+          "turnIndex": 5,
+          "expectedLayer": "prompt",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0022",
+      "domain": "bank",
+      "language": "Hinglish-mixed",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Replacement card किस date को आएगा?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "आपका replacement card 15 November को आएगा.",
+          "startMs": 2400,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 7200,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Send it to my registered address.",
+          "startMs": 10200,
+          "endMs": 12300
+        },
+        {
+          "role": "agent",
+          "text": "आपका replacement card 15 November को आएगा.",
+          "startMs": 12600,
+          "endMs": 14800
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15100,
+          "endMs": 17200
+        },
+        {
+          "role": "agent",
+          "text": "Our policy requires a mandatory 2000 rupee approval fee before any request.",
+          "startMs": 17500,
+          "endMs": 20000
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20300,
+          "endMs": 22300
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22600,
+          "endMs": 24300
+        }
+      ],
+      "faults": [
+        {
+          "id": "loop-repeat",
+          "turnIndex": 5,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "hallucinated-policy",
+          "turnIndex": 7,
+          "expectedLayer": "llm",
+          "uiLayer": "prompt"
+        }
+      ]
+    },
+    {
+      "id": "call-0028",
+      "domain": "telecom",
+      "language": "English",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, What does this recharge cost?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "This recharge costs 500 rupees.",
+          "startMs": 2400,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7000,
+          "endMs": 9300
+        },
+        {
+          "role": "caller",
+          "text": "Registered number pe recharge kar dijiye.",
+          "startMs": 9600,
+          "endMs": 11700,
+          "heardText": "Cancel my request, do not arrange it."
+        },
+        {
+          "role": "agent",
+          "text": "Okay, I will cancel it. Please confirm the cancellation.",
+          "startMs": 12000,
+          "endMs": 14700
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15000,
+          "endMs": 15300
+        }
+      ],
+      "faults": [
+        {
+          "id": "asr-mishear",
+          "turnIndex": 4,
+          "expectedLayer": "asr",
+          "uiLayer": "platform"
+        },
+        {
+          "id": "early-hangup",
+          "turnIndex": 6,
+          "expectedLayer": "telecom",
+          "uiLayer": "platform"
+        }
+      ],
+      "hangup": {
+        "atMs": 15300,
+        "initiatedBy": "agent"
+      }
+    },
+    {
+      "id": "call-0003",
+      "domain": "food-delivery",
+      "language": "English",
+      "context": "Facts: Your order total is 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, What is the total for my order?",
+          "startMs": 0,
+          "endMs": 2300
+        },
+        {
+          "role": "agent",
+          "text": "Your order total is 500 rupees.",
+          "startMs": 2600,
+          "endMs": 4700
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 5000,
+          "endMs": 7000
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7300,
+          "endMs": 9600
+        },
+        {
+          "role": "caller",
+          "text": "Home delivery ke liye order kar dijiye.",
+          "startMs": 9900,
+          "endMs": 12100
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12400,
+          "endMs": 15100
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15400,
+          "endMs": 17500
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17800,
+          "endMs": 20200
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20500,
+          "endMs": 22400
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22700,
+          "endMs": 24400
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0002",
+      "domain": "bank",
+      "language": "English",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Hi, When will my replacement card arrive?",
+          "startMs": 0,
+          "endMs": 2200
+        },
+        {
+          "role": "agent",
+          "text": "Your replacement card will arrive on 15 November.",
+          "startMs": 2500,
+          "endMs": 4800
+        },
+        {
+          "role": "caller",
+          "text": "Please Hindi mein baat kijiye.",
+          "startMs": 5100,
+          "endMs": 7100
+        },
+        {
+          "role": "agent",
+          "text": "Haan, ab Hindi mein baat karte hain. Bataiye.",
+          "startMs": 7400,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Registered address pe bhej dijiye.",
+          "startMs": 10000,
+          "endMs": 12000
+        },
+        {
+          "role": "agent",
+          "text": "Theek hai, pehle confirm kar dijiye, kya main request submit kar doon?",
+          "startMs": 12300,
+          "endMs": 15000
+        },
+        {
+          "role": "caller",
+          "text": "Haan, confirm hai. Submit kar dijiye.",
+          "startMs": 15300,
+          "endMs": 17400
+        },
+        {
+          "role": "agent",
+          "text": "Request submit ho gayi. Koi approval fee nahi hai.",
+          "startMs": 17700,
+          "endMs": 20100
+        },
+        {
+          "role": "caller",
+          "text": "Theek hai, shukriya. Bye.",
+          "startMs": 20400,
+          "endMs": 22300
+        },
+        {
+          "role": "agent",
+          "text": "Shukriya, bye.",
+          "startMs": 22600,
+          "endMs": 24300
+        }
+      ],
+      "faults": []
+    },
+    {
+      "id": "call-0024",
+      "domain": "telecom",
+      "language": "Hinglish-mixed",
+      "context": "Facts: This recharge costs 500 rupees. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "इस recharge का कितना लगेगा?",
+          "startMs": 0,
+          "endMs": 2000
+        },
+        {
+          "role": "agent",
+          "text": "इस recharge के 500 rupees लगेंगे.",
+          "startMs": 2300,
+          "endMs": 4400
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4700,
+          "endMs": 6700
+        },
+        {
+          "role": "agent",
+          "text": "I will continue in English only.",
+          "startMs": 7000,
+          "endMs": 9700
+        },
+        {
+          "role": "caller",
+          "text": "Recharge my registered number.",
+          "startMs": 10000,
+          "endMs": 11900,
+          "heardText": "Cancel my request, do not arrange it."
+        },
+        {
+          "role": "agent",
+          "text": "Okay, I will cancel it. Please confirm the cancellation.",
+          "startMs": 12200,
+          "endMs": 14400
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 14700,
+          "endMs": 16800
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17100,
+          "endMs": 19600
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 19900,
+          "endMs": 21900
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22200,
+          "endMs": 23900
+        }
+      ],
+      "faults": [
+        {
+          "id": "ignored-language-switch",
+          "turnIndex": 3,
+          "expectedLayer": "prompt",
+          "uiLayer": "prompt"
+        },
+        {
+          "id": "asr-mishear",
+          "turnIndex": 4,
+          "expectedLayer": "asr",
+          "uiLayer": "platform"
+        }
+      ]
+    },
+    {
+      "id": "call-0018",
+      "domain": "bank",
+      "language": "Hinglish-Latin",
+      "context": "Facts: Your replacement card will arrive on 15 November. Policy: no approval fee. Ask for confirmation before submitting the request. Follow the caller's explicit language preference.",
+      "turns": [
+        {
+          "role": "caller",
+          "text": "Replacement card kis date ko aayega?",
+          "startMs": 0,
+          "endMs": 2100
+        },
+        {
+          "role": "agent",
+          "text": "Aapka replacement card 15 November ko aayega.",
+          "startMs": 2400,
+          "endMs": 4600
+        },
+        {
+          "role": "caller",
+          "text": "Please switch to English now.",
+          "startMs": 4900,
+          "endMs": 6900
+        },
+        {
+          "role": "agent",
+          "text": "Sure, let's continue in English. What would you like me to do?",
+          "startMs": 5100,
+          "endMs": 9900
+        },
+        {
+          "role": "caller",
+          "text": "Send it to my registered address.",
+          "startMs": 10200,
+          "endMs": 12300,
+          "endpointMs": 11300
+        },
+        {
+          "role": "agent",
+          "text": "Please confirm: should I submit this request?",
+          "startMs": 12600,
+          "endMs": 14800
+        },
+        {
+          "role": "caller",
+          "text": "Yes, I confirm. Please submit it.",
+          "startMs": 15100,
+          "endMs": 17200
+        },
+        {
+          "role": "agent",
+          "text": "Your request has been submitted. There is no approval fee.",
+          "startMs": 17500,
+          "endMs": 20000
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, that is all. Goodbye.",
+          "startMs": 20300,
+          "endMs": 22300
+        },
+        {
+          "role": "agent",
+          "text": "Thanks. Goodbye.",
+          "startMs": 22600,
+          "endMs": 24300
+        }
+      ],
+      "faults": [
+        {
+          "id": "talked-over-caller",
+          "turnIndex": 3,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        },
+        {
+          "id": "false-endpoint",
+          "turnIndex": 4,
+          "expectedLayer": "vad",
+          "uiLayer": "vad"
+        }
+      ]
+    }
+  ],
+  "v1": [
+    {
+      "callId": "call-0011",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0007",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0009",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0023",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0014",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0015",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0027",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0001",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0016",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0005",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0010",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0026",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0006",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0030",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0013",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0029",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0021",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0004",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0020",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0008",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0012",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0025",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0017",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0019",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0022",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0028",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0003",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0002",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0024",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "callId": "call-0018",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 4
+        },
+        {
+          "paramId": "naturalness",
+          "value": 3
+        },
+        {
+          "paramId": "recovery",
+          "value": 3
+        }
+      ]
+    }
+  ],
+  "v2": [
+    {
+      "callId": "call-0011",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0007",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0009",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0023",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0014",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0015",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0027",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0001",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0016",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0005",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0010",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0026",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0006",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0030",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0013",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0029",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0021",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0004",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0020",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0008",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0012",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0025",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0017",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0019",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0022",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0028",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0003",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0002",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0024",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "callId": "call-0018",
+      "ok": true,
+      "verdict": "good",
+      "goalAchieved": true,
+      "findings": [],
+      "error": "",
+      "scores": [
+        {
+          "paramId": "accuracy",
+          "value": 2
+        },
+        {
+          "paramId": "naturalness",
+          "value": 5
+        },
+        {
+          "paramId": "recovery",
+          "value": 5
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "id": "constructed-gate",
+    "name": "Constructed parameter regression",
+    "agentId": "fixture",
+    "enabled": true,
+    "minComposite": 3,
+    "minParams": {
+      "accuracy": 3.5
+    },
+    "maxBlockers": 0,
+    "minSamples": 20,
+    "maxRegression": 0.5,
+    "baselineVersionNumber": 1
+  },
+  "baseline": {
+    "verdict": "good",
+    "counts": {
+      "good": 30,
+      "mixed": 0,
+      "bad": 0,
+      "errored": 0,
+      "done": 30
+    },
+    "goalRate": 100,
+    "composite": 3.3333333333333335,
+    "paramAverages": {
+      "accuracy": 4,
+      "naturalness": 3,
+      "recovery": 3
+    },
+    "samples": 30,
+    "blockerFindings": 0,
+    "partial": false,
+    "summary": "Simulated 30 scenarios: 30 good, 0 mixed, 0 bad. Goal achieved 100%."
+  },
+  "candidate": {
+    "verdict": "good",
+    "counts": {
+      "good": 30,
+      "mixed": 0,
+      "bad": 0,
+      "errored": 0,
+      "done": 30
+    },
+    "goalRate": 100,
+    "composite": 4,
+    "paramAverages": {
+      "accuracy": 2,
+      "naturalness": 5,
+      "recovery": 5
+    },
+    "samples": 30,
+    "blockerFindings": 0,
+    "partial": false,
+    "summary": "Simulated 30 scenarios: 30 good, 0 mixed, 0 bad. Goal achieved 100%."
+  },
+  "before": {
+    "outcome": "pass",
+    "checks": [
+      {
+        "id": "samples",
+        "label": "Sample size",
+        "outcome": "pass",
+        "detail": "30 calls tested (minimum 20)."
+      },
+      {
+        "id": "composite",
+        "label": "Composite score",
+        "outcome": "pass",
+        "detail": "Composite 3.33 meets the floor of 3.00."
+      },
+      {
+        "id": "param:accuracy",
+        "label": "Accuracy",
+        "outcome": "pass",
+        "detail": "\"Accuracy\" scored 4.00 (floor 3.50)."
+      },
+      {
+        "id": "blockers",
+        "label": "Blocker findings",
+        "outcome": "pass",
+        "detail": "0 blocker finding(s), ceiling 0."
+      },
+      {
+        "id": "regression",
+        "label": "Regression vs baseline",
+        "outcome": "skip",
+        "detail": "No baseline version to compare against — the first scored version cannot regress."
+      }
+    ],
+    "summary": "PASS — Constructed parameter regression: 4 checks green across 30 calls.",
+    "blockers": []
+  },
+  "after": {
+    "outcome": "fail",
+    "checks": [
+      {
+        "id": "samples",
+        "label": "Sample size",
+        "outcome": "pass",
+        "detail": "30 calls tested (minimum 20)."
+      },
+      {
+        "id": "composite",
+        "label": "Composite score",
+        "outcome": "pass",
+        "detail": "Composite 4.00 meets the floor of 3.00."
+      },
+      {
+        "id": "param:accuracy",
+        "label": "Accuracy",
+        "outcome": "fail",
+        "detail": "\"Accuracy\" scored 2.00, below its floor of 3.50."
+      },
+      {
+        "id": "blockers",
+        "label": "Blocker findings",
+        "outcome": "pass",
+        "detail": "0 blocker finding(s), ceiling 0."
+      },
+      {
+        "id": "regression",
+        "label": "Regression vs baseline",
+        "outcome": "pass",
+        "detail": "Composite held or improved against v1 (3.33 → 4.00)."
+      }
+    ],
+    "summary": "FAIL — Constructed parameter regression: Accuracy.",
+    "blockers": [
+      "Accuracy: \"Accuracy\" scored 2.00, below its floor of 3.50."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+version: 1
+id: interrupter
+name: Interrupter
+scenarios:
+  - id: interrupter-01
+    name: Interrupter
+    persona: An impatient caller interrupts a long explanation to correct the
+      requested date.
+    goal: Change a booking date without repeating the whole explanation.
+    successCriteria:
+      - Acknowledge and use the corrected date.
+      - Confirm the final request before claiming success.
+    language: en
+    tags:
+      - interruption
+      - correction
+    callerTurns:
+      - Please change my booking to Friday.
+      - Sorry, I meant Saturday. Please confirm the date.

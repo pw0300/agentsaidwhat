@@ -1,0 +1,12 @@
+// Existing UI smoke tests need one bundled entry so every export shares a context.
+export { App, default } from '../src/App'
+export { CommandPalette } from '../src/CommandPalette'
+export { IssueDrawer } from '../src/IssueDrawer'
+export { Calls } from '../src/Calls'
+export { Triage, IssueBoard } from '../src/Workbench'
+export { LogCall } from '../src/LogCall'
+export { Settings } from '../src/Settings'
+export { Toast } from '../src/Toast'
+export { StoreContext } from '../src/store'
+export { demoState, DEMO_PROJECT_ID } from '../src/demo'
+export { defaultRubric } from '../src/data'

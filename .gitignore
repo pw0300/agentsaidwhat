@@ -1,0 +1,52 @@
+node_modules
+dist
+
+.vercel
+
+# Real corpora. Indic DiarBench is CC BY 4.0 and downloadable from HuggingFace;
+# the file is 1.2 GB of audio and must not be committed.
+data/*
+!data/indic_calibration.json
+
+# The voice-model audit result IS the artifact. Its inputs (1.2GB parquet, 24
+# generated WAV pairs) stay out; the scores and the verdict are small and are the
+# thing anyone would want to check.
+!data/voice_probe/
+data/voice_probe/*
+!data/voice_probe/NISQA_results.csv
+!data/voice_probe/verdict.json
+!data/voice_probe/NISQA_control.csv
+!data/voice_probe/control_verdict.json
+data/voice_probe/NISQA_somos.csv
+!data/voice_probe/calibration_verdict.json
+!data/somos/mos_labels.csv
+!data/asr_wer.csv
+!data/asr_verdict.json
+
+# NISQA's pinned wheels (torch 2.2.1, numpy 1.26.4) do not exist for Python 3.14,
+# so the scorer needs its own 3.11 environment. Recreated by the commands in
+# docs/VOICE-SCORING.md; not worth versioning. Its weights are 1.2 MB of torch
+# checkpoint and are fetched from the NISQA repo.
+.venv-nisqa/
+models/
+
+# Partial download, left behind by an interrupted fetch_somos.py run.
+data/*.part
+
+# Python bytecode from the venv-imported analysis tools.
+__pycache__/
+*.pyc
+!data/asr_wer_small.csv
+!data/asr_compare.json
+!data/asr_compare.csv
+
+# Local server build output and the workspace a local run creates.
+dist-server/
+# Keep ignoring the legacy default data folder to protect existing workspaces.
+agent-qa-data/
+
+# Incremental TypeScript metadata.
+*.tsbuildinfo
+
+# Static sample demo output.
+dist-demo/

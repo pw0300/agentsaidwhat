@@ -1,0 +1,16 @@
+{
+  "//": "The serverless functions are not part of the Vite build, so tsc -b never saw them. Without this they would only fail at deploy time. `types: [node]` is there purely for process.env — the functions have zero npm deps and run on the Edge runtime.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["api"]
+}

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" width="960" height="240" role="img" aria-label="Issue lifecycle: open, claimed fixed, verified fixed. A failed re-test reopens it." font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif">
+  <title>Issue lifecycle: open, claimed fixed, verified fixed. A failed re-test reopens it.</title>
+  <defs>
+    <marker id="arrMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrRedLoop" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#e11d48"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="960" height="240" rx="16" fill="#ffffff"/>
+  <rect x="1" y="1" width="958" height="238" rx="15" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Header -->
+  <g transform="translate(0, 32)">
+    <text x="480" y="0" font-size="19" fill="#0f172a" font-weight="800" text-anchor="middle" letter-spacing="-0.3">"Fixed" is a claim. "Verified" is evidence.</text>
+    <text x="480" y="20" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">Only a tester's re-check on the new version closes an issue</text>
+  </g>
+
+  <!-- Step Connectors -->
+  <g transform="translate(0, 110)">
+    <line x1="294" y1="0" x2="352" y2="0" stroke="#94a3b8" stroke-width="1.8" marker-end="url(#arrMuted)"/>
+    <text x="327" y="-8" font-size="10.5" fill="#64748b" font-weight="600" text-anchor="middle">ships v13</text>
+
+    <line x1="600" y1="0" x2="658" y2="0" stroke="#94a3b8" stroke-width="1.8" marker-end="url(#arrMuted)"/>
+    <text x="633" y="-8" font-size="10.5" fill="#64748b" font-weight="600" text-anchor="middle">re-test</text>
+  </g>
+
+  <!-- Card 1: Open -->
+  <g transform="translate(56, 68)">
+    <rect width="236" height="84" rx="12" fill="#ffffff" stroke="#fecdd3" stroke-width="1.2"/>
+    <rect width="4" height="84" rx="2" fill="#e11d48"/>
+
+    <!-- Status pill -->
+    <rect x="16" y="12" width="70" height="18" rx="9" fill="#fff1f2"/>
+    <circle cx="25" cy="21" r="3" fill="#e11d48"/>
+    <text x="34" y="24" font-size="9.5" fill="#e11d48" font-weight="700" letter-spacing="0.3">OPEN</text>
+
+    <!-- Bug icon -->
+    <circle cx="210" cy="22" r="11" fill="#fff1f2"/>
+    <path d="M206 22 H214 M210 18 V26" stroke="#e11d48" stroke-width="1.3" stroke-linecap="round"/>
+
+    <text x="16" y="48" font-size="17" fill="#0f172a" font-weight="800">Open</text>
+    <text x="16" y="66" font-size="12" fill="#64748b" font-weight="500">born in v12</text>
+  </g>
+
+  <!-- Card 2: Claimed Fixed -->
+  <g transform="translate(362, 68)">
+    <rect width="236" height="84" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+    <rect width="4" height="84" rx="2" fill="#d97706"/>
+
+    <rect x="16" y="12" width="84" height="18" rx="9" fill="#fffbeb"/>
+    <circle cx="25" cy="21" r="3" fill="#d97706"/>
+    <text x="34" y="24" font-size="9.5" fill="#d97706" font-weight="700" letter-spacing="0.3">CLAIMED</text>
+
+    <!-- Dev / commit icon -->
+    <circle cx="210" cy="22" r="11" fill="#fffbeb"/>
+    <path d="M206 22 H214 M210 19 L213 22 L210 25" fill="none" stroke="#d97706" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="16" y="48" font-size="17" fill="#0f172a" font-weight="800">Claimed fixed</text>
+    <text x="16" y="66" font-size="12" fill="#64748b" font-weight="500">dev says v13 fixes it</text>
+  </g>
+
+  <!-- Card 3: Verified Fixed -->
+  <g transform="translate(668, 68)">
+    <rect width="236" height="84" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+    <rect width="4" height="84" rx="2" fill="#059669"/>
+
+    <rect x="16" y="12" width="82" height="18" rx="9" fill="#ecfdf5"/>
+    <circle cx="25" cy="21" r="3" fill="#059669"/>
+    <text x="34" y="24" font-size="9.5" fill="#059669" font-weight="700" letter-spacing="0.3">VERIFIED</text>
+
+    <!-- Shield check icon -->
+    <circle cx="210" cy="22" r="11" fill="#ecfdf5"/>
+    <path d="M206 22 L209 25 L214 19" fill="none" stroke="#059669" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="16" y="48" font-size="17" fill="#0f172a" font-weight="800">Verified fixed</text>
+    <text x="16" y="66" font-size="12" fill="#64748b" font-weight="500">a tester re-checked v13</text>
+  </g>
+
+  <!-- Re-test Failure Return Loop -->
+  <path d="M 786 152 V 180 Q 786 196 768 196 H 192 Q 174 196 174 180 V 158" fill="none" stroke="#e11d48" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrRedLoop)"/>
+
+  <!-- Return Loop Badge -->
+  <g transform="translate(260, 184)">
+    <rect width="440" height="24" rx="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <circle cx="16" cy="12" r="3.5" fill="#e11d48"/>
+    <text x="220" y="16" font-size="11.5" fill="#e11d48" font-weight="700" text-anchor="middle">Re-test fails? It reopens, with the version it failed on.</text>
+  </g>
+</svg>

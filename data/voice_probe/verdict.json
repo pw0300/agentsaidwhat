@@ -1,0 +1,12 @@
+{
+  "clean_mos": 2.033055007457733,
+  "rejected_degradations": [
+    "noisy",
+    "clipped",
+    "telephone",
+    "band"
+  ],
+  "accepted_degradations": [],
+  "hum_delta": 0.31465238332748413,
+  "usable_as_gate": false
+}

@@ -1,0 +1,82 @@
+{
+  "name": "agentsaidwhat",
+  "version": "0.2.0",
+  "description": "An agentic QA testbench for voice agents. Catch it before your customers do.",
+  "type": "module",
+  "bin": {
+    "saidwhat": "./cli.mjs",
+    "agentsaidwhat": "./cli.mjs"
+  },
+  "files": [
+    "cli.mjs",
+    "server",
+    "examples",
+    "docs/*.md",
+    "docs/schemas",
+    "dist",
+    "dist-server",
+    "api",
+    "README.md",
+    "LICENSE",
+    "scenarios",
+    "DATA-LICENSES.md",
+    "data",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md",
+    "CHANGELOG.md",
+    "ROADMAP.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && tsc -p tsconfig.api.json && vite build && npm run build:server",
+    "preview": "vite preview",
+    "test": "npm run build:lib && npm run build:render && npm run build:server && vite build && node test/run_all.mjs",
+    "build:lib": "esbuild api/_audio.ts --format=esm --outfile=node_modules/.tmp/_audio.mjs && esbuild api/_calibration.ts --format=esm --outfile=node_modules/.tmp/_calibration.mjs && esbuild api/_exotel.ts --bundle --format=esm --outfile=node_modules/.tmp/_exotel.mjs && esbuild api/_fixtures.ts --bundle --format=esm --outfile=node_modules/.tmp/_fixtures.mjs && esbuild api/_gate.ts --format=esm --outfile=node_modules/.tmp/_gate.mjs && esbuild api/_judge.ts --bundle --format=esm --outfile=node_modules/.tmp/_judge.mjs && esbuild api/_judgepanel.ts --format=esm --outfile=node_modules/.tmp/_judgepanel.mjs && esbuild api/_merge.ts --format=esm --outfile=node_modules/.tmp/_merge.mjs && esbuild api/_naturalness.ts --format=esm --outfile=node_modules/.tmp/_naturalness.mjs && esbuild api/_redact.ts --format=esm --outfile=node_modules/.tmp/_redact.mjs && esbuild api/_simulate.ts --format=esm --outfile=node_modules/.tmp/_simulate.mjs && esbuild api/_suite.ts --format=esm --outfile=node_modules/.tmp/_suite.mjs && esbuild api/_telephony.ts --format=esm --outfile=node_modules/.tmp/_telephony.mjs && esbuild api/_verify.ts --bundle --format=esm --outfile=node_modules/.tmp/_verify.mjs && esbuild api/_voicebench.ts --format=esm --outfile=node_modules/.tmp/_voicebench.mjs && esbuild src/transcript.ts --format=esm --outfile=node_modules/.tmp/_transcript.mjs && esbuild api/_measure.ts --bundle --format=esm --outfile=node_modules/.tmp/_measure.mjs && esbuild src/notes.ts --bundle --format=esm --outfile=node_modules/.tmp/_notes.mjs && esbuild src/demo.ts --bundle --format=esm --outfile=node_modules/.tmp/_demo.mjs && esbuild src/data.ts --bundle --format=esm --outfile=node_modules/.tmp/_data.mjs && esbuild api/_scenariopack.ts --format=esm --outfile=node_modules/.tmp/_scenariopack.mjs && esbuild src/palette.ts --format=esm --outfile=node_modules/.tmp/_palette.mjs && esbuild src/callFilters.ts --bundle --format=esm --outfile=node_modules/.tmp/_callFilters.mjs && esbuild src/issueNavigation.ts --format=esm --outfile=node_modules/.tmp/_issueNavigation.mjs && esbuild test/hotkeyHarness.ts --bundle --alias:react=./test/reactHookStub.ts --tsconfig=test/tsconfig-hooks.json --format=esm --jsx=transform --outfile=node_modules/.tmp/_hotkeys.mjs && esbuild src/undo.ts --format=esm --outfile=node_modules/.tmp/_undo.mjs && esbuild bench/faults.ts --bundle --platform=node --format=esm --outfile=node_modules/.tmp/faultbench-faults.mjs && esbuild bench/generate.ts --bundle --platform=node --format=esm --outfile=node_modules/.tmp/faultbench-generate.mjs && esbuild bench/score.ts --bundle --platform=node --format=esm --outfile=node_modules/.tmp/faultbench-score.mjs && esbuild bench/gate-validation.ts --bundle --platform=node --format=esm --outfile=node_modules/.tmp/faultbench-gate-validation.mjs && esbuild api/_adapter.ts --bundle --format=esm --outfile=node_modules/.tmp/_adapter.mjs && esbuild api/_generic-adapters.ts --bundle --format=esm --outfile=node_modules/.tmp/_generic-adapters.mjs && esbuild api/_caller-driver.ts --bundle --format=esm --outfile=node_modules/.tmp/_caller-driver.mjs && esbuild api/_run.ts --bundle --format=esm --outfile=node_modules/.tmp/_run.mjs && esbuild api/_vapi.ts --bundle --format=esm --outfile=node_modules/.tmp/_vapi.mjs && esbuild api/_retell.ts --bundle --format=esm --outfile=node_modules/.tmp/_retell.mjs && esbuild api/_pipecat.ts --bundle --format=esm --outfile=node_modules/.tmp/_pipecat.mjs && esbuild api/_livekit.ts --bundle --format=esm --outfile=node_modules/.tmp/_livekit.mjs",
+    "build:render": "esbuild src/App.tsx --bundle --format=esm --jsx=automatic --loader:.tsx=tsx --outfile=node_modules/.tmp/_ui.mjs --external:react --external:react-dom && esbuild test/uiHarness.ts --bundle --format=esm --jsx=automatic --outfile=node_modules/.tmp/_ui-ux.mjs --external:react --external:react-dom && esbuild test/uiRenderHarness.ts --bundle --format=esm --jsx=automatic --loader:.tsx=tsx --outfile=node_modules/.tmp/_ui-ux.mjs --external:react --external:react-dom && esbuild test/ui-entry.tsx --bundle --format=esm --jsx=automatic --loader:.tsx=tsx --outfile=node_modules/.tmp/_ui-ux.mjs --external:react --external:react-dom",
+    "bench": "npm run build:lib && node bench.mjs && node natbench.mjs",
+    "bench:faults": "node bench/run.mjs",
+    "test:chain": "npm run build:lib && npm run build:render && node test/audio.test.mjs && node test/audio_audit.test.mjs && node test/calibration.test.mjs && node test/cutoff.test.mjs && node test/exotel.test.mjs && node test/floor.test.mjs && node test/gate.test.mjs && node test/interrupt.test.mjs && node test/judge.test.mjs && node test/merge.test.mjs && node test/naturalness.test.mjs && node --experimental-strip-types test/ownership.test.mjs && node test/render.test.mjs && node test/simulate.test.mjs && node test/telephony.test.mjs && node test/verify.test.mjs && node test/voicebench.test.mjs",
+    "audit": "node audit.mjs",
+    "build:server": "esbuild server/lib.ts --bundle --platform=node --format=esm --outfile=dist-server/lib.mjs --packages=external",
+    "start": "node server/local.mjs",
+    "local": "npm run build && node server/local.mjs",
+    "prepack": "npm run build",
+    "build:demo": "tsc -b && vite build --mode demo"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "diff": "^7.0.0",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "ws": "^8.22.0",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.0",
+    "@types/node": "^26.2.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pw0300/agentsaidwhat"
+  },
+  "keywords": [
+    "voice-agents",
+    "testing",
+    "qa",
+    "release-gates"
+  ]
+}

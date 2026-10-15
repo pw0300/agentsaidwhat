@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="960" height="260" role="img" aria-label="The loop: scenario, call, score, blame a layer and owner, gate the release; failures feed the next scenario." font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif">
+  <title>The loop: scenario, call, score, blame a layer and owner, gate the release; failures feed the next scenario.</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#e11d48"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="960" height="260" rx="16" fill="#ffffff"/>
+  <rect x="1" y="1" width="958" height="258" rx="15" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(0, 32)">
+    <text x="480" y="0" font-size="19" fill="#0f172a" font-weight="800" text-anchor="middle" letter-spacing="-0.3">One loop. Every release goes round it.</text>
+    <text x="480" y="20" font-size="12.5" fill="#64748b" font-weight="500" text-anchor="middle">Logged calls and simulated callers feed the same scorecard and the same gate</text>
+  </g>
+
+  <!-- Horizontal Inter-Card Connectors -->
+  <line x1="190" y1="134" x2="209" y2="134" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="376" y1="134" x2="395" y2="134" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="562" y1="134" x2="581" y2="134" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="748" y1="134" x2="767" y2="134" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Card 1: Scenario -->
+  <g transform="translate(26, 72)">
+    <rect width="164" height="124" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <rect width="164" height="4" rx="2" fill="#2563eb"/>
+    
+    <!-- Step Badge & Icon -->
+    <circle cx="28" cy="28" r="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="28" y="32.5" font-size="11.5" fill="#2563eb" font-weight="800" text-anchor="middle">1</text>
+    
+    <!-- User / doc icon -->
+    <path d="M128 22 C128 20.9 128.9 20 130 20 H142 L148 26 V36 C148 37.1 147.1 38 146 38 H130 C128.9 38 128 37.1 128 36 Z" fill="none" stroke="#2563eb" stroke-width="1.3"/>
+    <path d="M142 20 V26 H148" fill="none" stroke="#2563eb" stroke-width="1.3"/>
+    <line x1="133" y1="28" x2="141" y2="28" stroke="#2563eb" stroke-width="1.2"/>
+    <line x1="133" y1="32" x2="143" y2="32" stroke="#2563eb" stroke-width="1.2"/>
+
+    <text x="16" y="62" font-size="15" fill="#0f172a" font-weight="700">Scenario</text>
+    <text x="16" y="82" font-size="11.5" fill="#64748b" font-weight="400">Who calls and what</text>
+    <text x="16" y="98" font-size="11.5" fill="#64748b" font-weight="400">they want</text>
+  </g>
+
+  <!-- Card 2: Call -->
+  <g transform="translate(212, 72)">
+    <rect width="164" height="124" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <rect width="164" height="4" rx="2" fill="#7c3aed"/>
+    
+    <circle cx="28" cy="28" r="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="28" y="32.5" font-size="11.5" fill="#7c3aed" font-weight="800" text-anchor="middle">2</text>
+    
+    <!-- Headset icon -->
+    <path d="M132 28 A7 7 0 0 1 146 28 V32 A2 2 0 0 1 144 34 H143 M132 28 V32 A2 2 0 0 0 134 34 H136" fill="none" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round"/>
+
+    <text x="16" y="62" font-size="15" fill="#0f172a" font-weight="700">Call</text>
+    <text x="16" y="82" font-size="11.5" fill="#64748b" font-weight="400">Human logs a real call,</text>
+    <text x="16" y="98" font-size="11.5" fill="#64748b" font-weight="400">or a simulated caller</text>
+  </g>
+
+  <!-- Card 3: Score -->
+  <g transform="translate(398, 72)">
+    <rect width="164" height="124" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <rect width="164" height="4" rx="2" fill="#d97706"/>
+    
+    <circle cx="28" cy="28" r="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="28" y="32.5" font-size="11.5" fill="#d97706" font-weight="800" text-anchor="middle">3</text>
+    
+    <!-- Target / checklist icon -->
+    <rect x="130" y="21" width="16" height="18" rx="2" fill="none" stroke="#d97706" stroke-width="1.3"/>
+    <path d="M134 27 L137 30 L143 24" fill="none" stroke="#d97706" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="134" y1="34" x2="142" y2="34" stroke="#d97706" stroke-width="1.2"/>
+
+    <text x="16" y="62" font-size="15" fill="#0f172a" font-weight="700">Score</text>
+    <text x="16" y="82" font-size="11.5" fill="#64748b" font-weight="400">Rubric pinned to the</text>
+    <text x="16" y="98" font-size="11.5" fill="#64748b" font-weight="400">exact prompt version</text>
+  </g>
+
+  <!-- Card 4: Blame -->
+  <g transform="translate(584, 72)">
+    <rect width="164" height="124" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <rect width="164" height="4" rx="2" fill="#e11d48"/>
+    
+    <circle cx="28" cy="28" r="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <text x="28" y="32.5" font-size="11.5" fill="#e11d48" font-weight="800" text-anchor="middle">4</text>
+    
+    <!-- Layers / diagnostic icon -->
+    <path d="M130 25 L138 21 L146 25 L138 29 Z" fill="none" stroke="#e11d48" stroke-width="1.3"/>
+    <path d="M130 29 L138 33 L146 29" fill="none" stroke="#e11d48" stroke-width="1.3"/>
+    <path d="M130 33 L138 37 L146 33" fill="none" stroke="#e11d48" stroke-width="1.3"/>
+
+    <text x="16" y="62" font-size="15" fill="#0f172a" font-weight="700">Blame</text>
+    <text x="16" y="82" font-size="11.5" fill="#64748b" font-weight="400">The layer that broke,</text>
+    <text x="16" y="98" font-size="11.5" fill="#64748b" font-weight="400">and a named owner</text>
+  </g>
+
+  <!-- Card 5: Gate -->
+  <g transform="translate(770, 72)">
+    <rect width="164" height="124" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <rect width="164" height="4" rx="2" fill="#059669"/>
+    
+    <circle cx="28" cy="28" r="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="28" y="32.5" font-size="11.5" fill="#059669" font-weight="800" text-anchor="middle">5</text>
+    
+    <!-- Shield check icon -->
+    <path d="M138 20 L146 23 V29 C146 34 138 37 138 37 C138 37 130 34 130 29 V23 Z" fill="none" stroke="#059669" stroke-width="1.3"/>
+    <path d="M134 28 L137 31 L142 25" fill="none" stroke="#059669" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="16" y="62" font-size="15" fill="#0f172a" font-weight="700">Gate</text>
+    <text x="16" y="82" font-size="11.5" fill="#64748b" font-weight="400">Pass, fail or</text>
+    <text x="16" y="98" font-size="11.5" fill="#64748b" font-weight="400">inconclusive for CI</text>
+  </g>
+
+  <!-- Return Loop Path (Gate to Scenario) -->
+  <path d="M 852 196 V 218 Q 852 232 836 232 H 124 Q 108 232 108 218 V 203" fill="none" stroke="#e11d48" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowRed)"/>
+
+  <!-- Return Loop Badge -->
+  <g transform="translate(330, 220)">
+    <rect width="300" height="24" rx="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <circle cx="16" cy="12" r="3.5" fill="#e11d48"/>
+    <text x="150" y="16" font-size="12" fill="#e11d48" font-weight="700" text-anchor="middle">A failed gate becomes the next scenario.</text>
+  </g>
+</svg>

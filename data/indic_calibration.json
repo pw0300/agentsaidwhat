@@ -1,0 +1,265 @@
+{
+  "clips": [
+    {
+      "file": "hindi_001.wav",
+      "sr": 16000,
+      "durMs": 75330.0,
+      "snrDb": 60.6,
+      "separable": true,
+      "truthSpans": 7,
+      "detUtts": 31,
+      "score": {
+        "agree": 0.9102496016994158,
+        "falseSpeech": 0.02693714665779847,
+        "missedSpeech": 0.08074143889412504,
+        "tp": 5852,
+        "fp": 162,
+        "fn": 514,
+        "tn": 1004
+      },
+      "codeMixed": true,
+      "devWords": 205,
+      "latWords": 14
+    },
+    {
+      "file": "hindi_002.wav",
+      "sr": 16000,
+      "durMs": 201056.0,
+      "snrDb": 60.6,
+      "separable": true,
+      "truthSpans": 19,
+      "detUtts": 48,
+      "score": {
+        "agree": 0.9300636689216076,
+        "falseSpeech": 0.02379841343910406,
+        "missedSpeech": 0.05627607984662231,
+        "tp": 16736,
+        "fp": 408,
+        "fn": 998,
+        "tn": 1962
+      },
+      "codeMixed": true,
+      "devWords": 607,
+      "latWords": 29
+    },
+    {
+      "file": "hindi_003.wav",
+      "sr": 16000,
+      "durMs": 201056.0,
+      "snrDb": 55.0,
+      "separable": true,
+      "truthSpans": 12,
+      "detUtts": 64,
+      "score": {
+        "agree": 0.8983784321528054,
+        "falseSpeech": 0.017591492731489338,
+        "missedSpeech": 0.0906806282722513,
+        "tp": 17368,
+        "fp": 311,
+        "fn": 1732,
+        "tn": 693
+      },
+      "codeMixed": true,
+      "devWords": 640,
+      "latWords": 34
+    },
+    {
+      "file": "hindi_004.wav",
+      "sr": 16000,
+      "durMs": 187328.0,
+      "snrDb": 55.7,
+      "separable": true,
+      "truthSpans": 15,
+      "detUtts": 56,
+      "score": {
+        "agree": 0.9096150766109657,
+        "falseSpeech": 0.015728026132720344,
+        "missedSpeech": 0.08094215996384997,
+        "tp": 16271,
+        "fp": 260,
+        "fn": 1433,
+        "tn": 767
+      },
+      "codeMixed": true,
+      "devWords": 531,
+      "latWords": 37
+    },
+    {
+      "file": "hindi_005.wav",
+      "sr": 16000,
+      "durMs": 197664.0,
+      "snrDb": 50.4,
+      "separable": true,
+      "truthSpans": 13,
+      "detUtts": 49,
+      "score": {
+        "agree": 0.9287123703516317,
+        "falseSpeech": 0.007683988843986567,
+        "missedSpeech": 0.06809920889459055,
+        "tp": 17434,
+        "fp": 135,
+        "fn": 1274,
+        "tn": 922
+      },
+      "codeMixed": true,
+      "devWords": 585,
+      "latWords": 108
+    },
+    {
+      "file": "hindi_006.wav",
+      "sr": 16000,
+      "durMs": 200384.0,
+      "snrDb": 59.0,
+      "separable": true,
+      "truthSpans": 23,
+      "detUtts": 54,
+      "score": {
+        "agree": 0.9159554823576384,
+        "falseSpeech": 0.03487161693268564,
+        "missedSpeech": 0.06083286437816545,
+        "tp": 16689,
+        "fp": 603,
+        "fn": 1081,
+        "tn": 1664
+      },
+      "codeMixed": true,
+      "devWords": 557,
+      "latWords": 112
+    },
+    {
+      "file": "hindi_007.wav",
+      "sr": 16000,
+      "durMs": 196544.0,
+      "snrDb": 44.7,
+      "separable": true,
+      "truthSpans": 7,
+      "detUtts": 44,
+      "score": {
+        "agree": 0.9320205566580166,
+        "falseSpeech": 0.0014491945822417925,
+        "missedSpeech": 0.0681404421326398,
+        "tp": 17915,
+        "fp": 26,
+        "fn": 1310,
+        "tn": 402
+      },
+      "codeMixed": true,
+      "devWords": 678,
+      "latWords": 140
+    },
+    {
+      "file": "hindi_008.wav",
+      "sr": 16000,
+      "durMs": 190944.0,
+      "snrDb": 49.3,
+      "separable": true,
+      "truthSpans": 9,
+      "detUtts": 49,
+      "score": {
+        "agree": 0.9118001361755618,
+        "falseSpeech": 0.022510111964358988,
+        "missedSpeech": 0.07232267037552156,
+        "tp": 16675,
+        "fp": 384,
+        "fn": 1300,
+        "tn": 734
+      },
+      "codeMixed": true,
+      "devWords": 604,
+      "latWords": 104
+    },
+    {
+      "file": "hindi_009.wav",
+      "sr": 16000,
+      "durMs": 209056.0,
+      "snrDb": 37.8,
+      "separable": true,
+      "truthSpans": 10,
+      "detUtts": 58,
+      "score": {
+        "agree": 0.9210199004975125,
+        "falseSpeech": 0.007606571232370187,
+        "missedSpeech": 0.0742584014979797,
+        "tp": 18787,
+        "fp": 144,
+        "fn": 1507,
+        "tn": 466
+      },
+      "codeMixed": true,
+      "devWords": 676,
+      "latWords": 118
+    },
+    {
+      "file": "hindi_010.wav",
+      "sr": 16000,
+      "durMs": 198624.0,
+      "snrDb": 52.5,
+      "separable": true,
+      "truthSpans": 22,
+      "detUtts": 69,
+      "score": {
+        "agree": 0.8739741201349378,
+        "falseSpeech": 0.08793324775353016,
+        "missedSpeech": 0.05990256811210681,
+        "tp": 15631,
+        "fp": 1507,
+        "fn": 996,
+        "tn": 1727
+      },
+      "codeMixed": true,
+      "devWords": 580,
+      "latWords": 85
+    },
+    {
+      "file": "hindi_011.wav",
+      "sr": 16000,
+      "durMs": 194624.0,
+      "snrDb": 44.4,
+      "separable": true,
+      "truthSpans": 9,
+      "detUtts": 44,
+      "score": {
+        "agree": 0.93278865423154,
+        "falseSpeech": 0.00458295142071494,
+        "missedSpeech": 0.06600731025585896,
+        "tp": 17376,
+        "fp": 80,
+        "fn": 1228,
+        "tn": 777
+      },
+      "codeMixed": true,
+      "devWords": 624,
+      "latWords": 89
+    },
+    {
+      "file": "hindi_012.wav",
+      "sr": 16000,
+      "durMs": 194112.0,
+      "snrDb": 58.6,
+      "separable": true,
+      "truthSpans": 24,
+      "detUtts": 54,
+      "score": {
+        "agree": 0.9090674909840288,
+        "falseSpeech": 0.03910481518957205,
+        "missedSpeech": 0.06422443774634826,
+        "tp": 16144,
+        "fp": 657,
+        "fn": 1108,
+        "tn": 1501
+      },
+      "codeMixed": true,
+      "devWords": 634,
+      "latWords": 80
+    }
+  ],
+  "summary": {
+    "n": 12,
+    "agree": 0.9144704575646386,
+    "missedSpeech": 0.07020235086417163,
+    "falseSpeech": 0.024149798073381048,
+    "utterancesPerTruthSpan": 3.6470588235294117,
+    "speechRecall": 0.9301645937721537,
+    "speechPrecision": 0.9763255802181671
+  }
+}

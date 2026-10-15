@@ -1,0 +1,19 @@
+{
+  "engine": "faster-whisper large-v3",
+  "language": "hi (pinned, not detected)",
+  "corpus": "Indic DiarBench (CC BY 4.0)",
+  "n_recordings": 6,
+  "reference_words": 3128,
+  "wer_strict": 0.4128,
+  "wer_loose": 0.5719,
+  "fold_threshold_strict": 0.72,
+  "fold_threshold_loose": 0.3,
+  "fold_margin": 0.014,
+  "wer_raw": 0.5719,
+  "overlap_correction": 0.7218,
+  "min_coverage": 0.494,
+  "mean_coverage": 0.618,
+  "control_self_wer": 0.0,
+  "control_note": "reference against itself must be 0.00% at both folds",
+  "measures": "the ASR engine on human-recorded Hindi, NOT an agent mishearing a caller"
+}

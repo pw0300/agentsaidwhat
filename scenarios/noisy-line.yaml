@@ -1,0 +1,19 @@
+version: 1
+id: noisy-line
+name: Noisy line
+scenarios:
+  - id: noisy-line-01
+    name: Noisy line
+    persona: A caller on a noisy connection repeats fragments of an address and asks
+      for confirmation.
+    goal: Confirm the address without guessing missing details.
+    successCriteria:
+      - Ask for clarification when details are unclear.
+      - Repeat the confirmed address before proceeding.
+    language: en
+    tags:
+      - noise
+      - clarification
+    callerTurns:
+      - My address is 12 ... sorry, the line cut out.
+      - It is 12 Park Road. Can you repeat that?

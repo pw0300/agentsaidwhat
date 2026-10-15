@@ -1,0 +1,19 @@
+{
+  "n": 100,
+  "pearson": 0.1235,
+  "pearson_ci95": [
+    -0.0725,
+    0.2903
+  ],
+  "spearman": 0.0916,
+  "human_mean": 3.412,
+  "pred_mean": 2.18,
+  "compression_ratio": 0.597,
+  "residual_sd": 0.4018,
+  "decision_gap_human_mos": 0.5,
+  "decision_gap_predicted": 0.2986,
+  "significant_at_95": false,
+  "calibrated": false,
+  "usable_as_absolute_scale": false,
+  "licence": "CC BY-NC-SA 4.0 (non-commercial) -- cannot ship in a product"
+}

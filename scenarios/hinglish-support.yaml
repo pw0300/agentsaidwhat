@@ -1,0 +1,20 @@
+version: 1
+id: hinglish-support
+name: Hinglish support
+scenarios:
+  - id: hinglish-support-01
+    name: Hinglish support
+    persona: A customer alternates Hindi and English while asking about a delayed order.
+    goal: Get the order status and next step.
+    successCriteria:
+      - Respond in the requested language.
+      - Do not invent an order status.
+      - Ask for only the information needed to look up the order.
+    language: hinglish
+    tags:
+      - support
+      - code-switch
+    callerTurns:
+      - Hi, where is my order?
+      - Mera order late hai. Kya aap Hindi mein help kar sakte hain?
+      - My order ID is DEMO-123. What is the next step?

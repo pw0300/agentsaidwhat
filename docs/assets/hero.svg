@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="960" height="320" role="img" aria-label="A voice agent promises a refund that does not exist. Our Agent Said What?! finds which layer broke and who owns it." font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif">
+  <title>A voice agent promises a refund that does not exist. Our Agent Said What?! finds which layer broke and who owns it.</title>
+  <defs>
+    <linearGradient id="heroCardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="960" height="320" rx="16" fill="#ffffff"/>
+  <rect x="1" y="1" width="958" height="318" rx="15" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Left: Incident Transcript Window -->
+  <g transform="translate(32, 24)">
+    <!-- Container Card -->
+    <rect width="520" height="272" rx="14" fill="url(#heroCardBg)" stroke="#e2e8f0" stroke-width="1.2"/>
+    
+    <!-- Window Header Bar -->
+    <rect width="520" height="42" rx="14" fill="#f1f5f9"/>
+    <rect y="30" width="520" height="12" fill="#f1f5f9"/>
+    <line x1="0" y1="42" x2="520" y2="42" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Window Controls / Status -->
+    <circle cx="20" cy="21" r="5" fill="#e11d48" opacity="0.8"/>
+    <circle cx="36" cy="21" r="5" fill="#d97706" opacity="0.8"/>
+    <circle cx="52" cy="21" r="5" fill="#059669" opacity="0.8"/>
+
+    <!-- Metadata Pill -->
+    <rect x="76" y="10" width="280" height="22" rx="11" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="88" y="25" font-size="11.5" fill="#475569" font-weight="500">Call #4,182 · Hinglish support · prompt v12</text>
+
+    <!-- Audio waveform indicator -->
+    <g transform="translate(420, 14)">
+      <rect x="0" y="5" width="2.5" height="6" rx="1" fill="#94a3b8"/>
+      <rect x="5" y="2" width="2.5" height="12" rx="1" fill="#2563eb"/>
+      <rect x="10" y="0" width="2.5" height="16" rx="1" fill="#2563eb"/>
+      <rect x="15" y="3" width="2.5" height="10" rx="1" fill="#94a3b8"/>
+      <rect x="20" y="6" width="2.5" height="4" rx="1" fill="#94a3b8"/>
+      <rect x="25" y="1" width="2.5" height="14" rx="1" fill="#e11d48"/>
+      <rect x="30" y="4" width="2.5" height="8" rx="1" fill="#e11d48"/>
+      <rect x="35" y="7" width="2.5" height="3" rx="1" fill="#94a3b8"/>
+      <text x="44" y="12" font-size="10.5" fill="#64748b" font-weight="600">00:14</text>
+    </g>
+
+    <!-- Turn 1: Caller -->
+    <g transform="translate(18, 54)">
+      <circle cx="16" cy="16" r="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <!-- Phone icon -->
+      <path d="M11 11.5 C11 15 13 17 16.5 17 C17.5 17 18 16.5 18 15.5 C18 14.5 17.5 14 16.5 14 C16 14 15.5 14.5 15.2 14.2 C14.5 13.5 14 12.5 13.8 11.8 C14 11.5 14.5 11 14.5 10 C14.5 9 14 8.5 13 8.5 C12 8.5 11 9.5 11 11.5 Z" fill="#2563eb"/>
+      <rect x="40" y="0" width="310" height="48" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="52" y="16" font-size="10" fill="#2563eb" font-weight="700" letter-spacing="0.5">CALLER · 00:03</text>
+      <text x="52" y="36" font-size="13" fill="#1f2937" font-weight="500">Mera order late hai. Refund milega?</text>
+    </g>
+
+    <!-- Turn 2: Agent (Violation) -->
+    <g transform="translate(70, 114)">
+      <rect x="0" y="0" width="384" height="64" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+      <circle cx="400" cy="16" r="14" fill="#ffe4e6" stroke="#fecdd3" stroke-width="1"/>
+      <!-- Headset icon -->
+      <path d="M394 17 A6 6 0 0 1 406 17 V20 A2 2 0 0 1 404 22 H403 M394 17 V20 A2 2 0 0 0 396 22 H397" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-linecap="round"/>
+      
+      <text x="14" y="18" font-size="10" fill="#e11d48" font-weight="800" letter-spacing="0.5">AGENT · 00:07</text>
+      <!-- Hallucination badge -->
+      <rect x="238" y="7" width="134" height="18" rx="9" fill="#e11d48"/>
+      <text x="305" y="19.5" font-size="9" fill="#ffffff" font-weight="700" text-anchor="middle" letter-spacing="0.3">HALLUCINATED POLICY</text>
+      
+      <text x="14" y="38" font-size="13" fill="#1f2937" font-weight="600">Haanji! Full refund guaranteed, 2 hours mein.</text>
+      <text x="14" y="53" font-size="10.5" fill="#e11d48" font-weight="500">No such policy exists</text>
+    </g>
+
+    <!-- Turn 3: Caller Reaction -->
+    <g transform="translate(18, 192)">
+      <circle cx="16" cy="16" r="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <path d="M11 11.5 C11 15 13 17 16.5 17 C17.5 17 18 16.5 18 15.5 C18 14.5 17.5 14 16.5 14 C16 14 15.5 14.5 15.2 14.2 C14.5 13.5 14 12.5 13.8 11.8 C14 11.5 14.5 11 14.5 10 C14.5 9 14 8.5 13 8.5 C12 8.5 11 9.5 11 11.5 Z" fill="#2563eb"/>
+      <rect x="40" y="0" width="170" height="42" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="52" y="16" font-size="10" fill="#2563eb" font-weight="700" letter-spacing="0.5">CALLER · 00:11</text>
+      <text x="52" y="32" font-size="13" fill="#1f2937" font-weight="500">...wait, really?</text>
+    </g>
+
+    <!-- Bottom verification pill -->
+    <rect x="18" y="244" width="484" height="20" rx="4" fill="#f8fafc"/>
+    <text x="24" y="258" font-size="10.5" fill="#64748b" font-weight="500">Telephony: clean  |  ASR: heard correctly  |  LLM + prompt: invented a policy</text>
+  </g>
+
+  <!-- Right: Explanatory Branding & Problem Statement -->
+  <g transform="translate(584, 30)">
+    <!-- Eyebrow Badge -->
+    <rect x="0" y="0" width="138" height="22" rx="11" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <circle cx="10" cy="11" r="3.5" fill="#e11d48"/>
+    <text x="18" y="15" font-size="10" fill="#e11d48" font-weight="700" letter-spacing="0.4">INCIDENT DRILLDOWN</text>
+
+    <!-- Main Headline -->
+    <text x="0" y="58" font-size="34" fill="#0f172a" font-weight="800" letter-spacing="-0.5">Our Agent</text>
+    <text x="0" y="96" font-size="38" fill="#e11d48" font-weight="900" letter-spacing="-0.5">Said What?!</text>
+
+    <!-- Reality check lines -->
+    <g transform="translate(0, 116)">
+      <circle cx="6" cy="7" r="2.5" fill="#e11d48"/>
+      <text x="16" y="11" font-size="14.5" fill="#0f172a" font-weight="600">There is no refund policy.</text>
+      
+      <circle cx="6" cy="27" r="2.5" fill="#94a3b8"/>
+      <text x="16" y="31" font-size="14" fill="#64748b" font-weight="400">There never was.</text>
+    </g>
+
+    <!-- Diagnostic Action Card -->
+    <g transform="translate(0, 168)">
+      <rect width="344" height="48" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <!-- Target / layer icon -->
+      <circle cx="26" cy="24" r="12" fill="#eff6ff"/>
+      <path d="M22 24 H30 M26 20 V28" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="26" cy="24" r="4" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="48" y="28" font-size="13.5" fill="#0f172a" font-weight="700">Which layer broke? Who owns it?</text>
+    </g>
+
+    <!-- Tagline -->
+    <text x="0" y="244" font-size="12.5" fill="#64748b" font-weight="400">This tool answers both, before customers ask.</text>
+  </g>
+</svg>

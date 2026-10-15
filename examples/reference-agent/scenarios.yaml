@@ -1,0 +1,17 @@
+version: 1
+id: reference-smoke
+name: Reference agent smoke checks
+scenarios:
+  - id: order-id
+    name: "Ask for an order ID"
+    persona: "A customer with a delayed order"
+    goal: "Exercise deterministic reference replies"
+    language: "en"
+    successCriteria:
+      - "contains: order ID"
+      - "notContains: guaranteed refund"
+    tags:
+      - "smoke"
+    callerTurns:
+      - "Where is my order?"
+      - "Thanks, bye"

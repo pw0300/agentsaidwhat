@@ -1,0 +1,26 @@
+{
+  "source": "Captured npm test output, aggregate from test/run_all.mjs",
+  "node": "v26.7.0",
+  "tests": {
+    "command": "npm test",
+    "files": 32,
+    "passing": 485,
+    "failing": 0,
+    "aggregateOutput": "32 files, 485 passing, 0 failing"
+  },
+  "typechecks": [
+    {
+      "command": "npx tsc -b",
+      "exitCode": 0
+    },
+    {
+      "command": "npx tsc -p tsconfig.api.json",
+      "exitCode": 0
+    },
+    {
+      "command": "npx tsc --noEmit --module ESNext --moduleResolution bundler --target es2022 --skipLibCheck bench/faults.ts bench/generate.ts bench/score.ts bench/gate-validation.ts",
+      "exitCode": 0
+    }
+  ],
+  "measures": "Automated fixture tests and TypeScript compile checks. Does not establish real call or judge performance."
+}

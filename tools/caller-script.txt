@@ -1,0 +1,30 @@
+# A caller script for dial-exotel.mjs
+#
+# Lines starting with ">" are spoken by the CALLER (this harness).
+# Other lines are what the agent is expected to reply; the harness plays a
+# placeholder of fixed duration so the call has both sides talking.
+# Lines starting with "-" are silent waits in milliseconds.
+#
+# Why the explicit waits matter: a real conversation has gaps in it, and those
+# gaps are the only thing the agent's VAD has to detect. A script that flips
+# between turns with no silence measures nothing at all.
+#
+# Real calls run 4-21 minutes with a median of 8 (measured on 1200 transcripts
+# of CallCenterEN). This one is deliberately short: it is a smoke test of the
+# telecom path, not a conversation-length sample.
+
+> Hi, I saw your ad for the Hinjawadi project.
+- 800
+I can help with that. Would you like to know more about the location?
+> Yeah, where exactly is it?
+- 1200
+It is in Hinjawadi, near the metro station.
+> And the prices?
+- 900
+Two BHK apartments start at eighty two lakh.
+> Can I pay in instalments?
+- 1400
+Yes, the payment plans are flexible.
+> Okay. I will think about it.
+- 1000
+Would you like to know more about the payment options?

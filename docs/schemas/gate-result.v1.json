@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Release gate result v1",
+  "description": "Successful evaluations, including failed or disabled gates. Request errors use a separate error envelope.",
+  "type": "object",
+  "properties": {
+    "outcome": {
+      "enum": [
+        "pass",
+        "fail",
+        "inconclusive",
+        "disabled"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "pass",
+              "fail",
+              "skip"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "outcome",
+          "detail"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "properties": {
+        "agent": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ],
+          "additionalProperties": true
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "number": {
+              "type": "number"
+            },
+            "changelog": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "number",
+            "changelog"
+          ],
+          "additionalProperties": true
+        },
+        "measured": {
+          "type": "object",
+          "properties": {
+            "composite": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "samples": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "humanSessions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "aiCalls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "blockerFindings": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unsubstantiatedSessions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "paramSamples": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "simulatedSessions": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "composite",
+            "samples",
+            "humanSessions",
+            "aiCalls",
+            "blockerFindings"
+          ],
+          "additionalProperties": true
+        },
+        "outcome": {
+          "enum": [
+            "pass",
+            "fail",
+            "inconclusive",
+            "disabled"
+          ]
+        },
+        "promptHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "evaluatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "signed": {
+          "const": false
+        },
+        "tenant": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "minComposite": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "minSamples": {
+              "type": "number"
+            },
+            "maxRegression": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "maxBlockers": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "minParams": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "minHumanSessions": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "name",
+            "enabled",
+            "minComposite",
+            "minSamples",
+            "maxRegression",
+            "maxBlockers",
+            "minParams"
+          ],
+          "additionalProperties": true
+        },
+        "summary": {
+          "type": "string"
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "agent",
+        "version",
+        "measured",
+        "outcome",
+        "promptHash",
+        "evaluatedAt"
+      ],
+      "additionalProperties": true,
+      "anyOf": [
+        {
+          "required": [
+            "signed"
+          ],
+          "properties": {
+            "signed": {
+              "const": false
+            }
+          }
+        },
+        {
+          "required": [
+            "tenant",
+            "policy",
+            "summary",
+            "blockers",
+            "hash",
+            "signature"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "outcome",
+    "checks",
+    "summary",
+    "blockers",
+    "receipt"
+  ],
+  "additionalProperties": true
+}

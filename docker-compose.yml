@@ -1,0 +1,16 @@
+services:
+  qa:
+    image: ghcr.io/pw0300/agentsaidwhat
+    build: .
+    ports:
+      - "127.0.0.1:5199:5199"
+    volumes:
+      - qa-data:/data
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+    restart: unless-stopped
+volumes:
+  qa-data:

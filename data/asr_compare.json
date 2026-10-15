@@ -1,0 +1,28 @@
+{
+  "clips": 6,
+  "reference_words": 3128,
+  "sample_sufficient": true,
+  "sample_floor": {
+    "clips": 5,
+    "words": 2000
+  },
+  "label": "benchmark",
+  "overlap_correction": 0.7218,
+  "fold_margin": 0.014,
+  "a": {
+    "name": "small",
+    "wer_min": 0.8379,
+    "wer_max": 0.8379,
+    "passes_budget": false
+  },
+  "b": {
+    "name": "large-v3",
+    "wer_min": 0.5719,
+    "wer_max": 0.5719,
+    "passes_budget": false
+  },
+  "gap_worst_endpoint": 0.266,
+  "gap_exceeds_uncertainty": true,
+  "budget": 0.15,
+  "caveat": "engine against engine on identical audio. NOT an agent mishearing a caller -- different layer, not measured."
+}

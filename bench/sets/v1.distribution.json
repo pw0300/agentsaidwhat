@@ -1,0 +1,29 @@
+{
+  "calls": 300,
+  "clean": 90,
+  "seed": 20261013,
+  "faults": {
+    "wrong-fact": 28,
+    "dodged-question": 27,
+    "loop-repeat": 29,
+    "ignored-language-switch": 27,
+    "talked-over-caller": 36,
+    "false-endpoint": 27,
+    "long-gap": 30,
+    "early-hangup": 26,
+    "asr-mishear": 24,
+    "hallucinated-policy": 33,
+    "unconfirmed-success": 28
+  },
+  "domains": {
+    "telecom": 75,
+    "food-delivery": 75,
+    "bank": 75,
+    "real-estate": 75
+  },
+  "languages": {
+    "Hinglish-Latin": 100,
+    "English": 100,
+    "Hinglish-mixed": 100
+  }
+}

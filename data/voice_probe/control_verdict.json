@@ -1,0 +1,15 @@
+{
+  "english_clean": 2.344,
+  "hindi_baseline": 2.033,
+  "hindi_speechonly": 2.106,
+  "language_effect": -0.311,
+  "silence_effect": 0.073,
+  "language_effect_ci95": [
+    -0.4815,
+    -0.1451
+  ],
+  "language_effect_real": true,
+  "silence_explains_hindi": false,
+  "english_is_confidently_good": false,
+  "usable_as_gate": false
+}
