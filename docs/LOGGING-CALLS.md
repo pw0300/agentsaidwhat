@@ -33,6 +33,6 @@
 
 Typing in a field suppresses screen shortcuts except Ctrl/Cmd+Enter, Escape
 and Ctrl/Cmd+K. Overlays pause screen shortcuts. Native button and input behavior
-still applies. See [the full shortcut reference](UX-CHANGES.md#keyboard-shortcuts)
+still applies. See [the full shortcut reference](history/UX-CHANGES.md#keyboard-shortcuts)
 for Calls, Triage and issue navigation. Saved changes offer Undo for six seconds;
 Undo preserves newer edits.

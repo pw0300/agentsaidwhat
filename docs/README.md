@@ -11,7 +11,7 @@ Start with [Quickstart](QUICKSTART.md), then choose the workflow you need.
 - [Metrics and what is NOT MEASURED](METRICS.md): inputs, evidence and limits.
 - [Gate stability](STABILITY.md) and [JSON Schema](schemas/gate-result.v1.json).
 - [Contributor starter tasks](GOOD-FIRST-ISSUES.md) and [roadmap](../ROADMAP.md).
-- [UX changes and complete shortcut reference](UX-CHANGES.md).
+- [UX changes and complete shortcut reference](history/UX-CHANGES.md).
 
 - [Usage reference](USAGE.md): setup, CLI, CI, architecture and Docker
 
